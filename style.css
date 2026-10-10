@@ -653,6 +653,7 @@ section {
 
 .showcase-stats {
     display: flex;
+    flex-wrap: wrap;
     gap: 3rem;
     margin-top: 3rem;
     padding-top: 2rem;
@@ -690,6 +691,12 @@ section {
     }
     .showcase-content {
         padding: 2rem;
+    }
+    .showcase-stats {
+        gap: 1.5rem;
+    }
+    .showcase-stat .number {
+        font-size: 1.5rem;
     }
 }
 
@@ -889,6 +896,29 @@ section {
     transform: translateY(0);
 }
 
+.cta-banner {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.cta-banner h2 {
+    color: white;
+    margin: 0;
+    font-weight: 300;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
 /* Footer */
 .footer {
     background: var(--secondary);
@@ -1042,11 +1072,16 @@ section {
     }
     
     .hero {
-        padding-top: 8rem;
+        padding-top: 4rem;
+    }
+    
+    .hero-content {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
     }
     
     .hero-overlay {
-        background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 70%, rgba(255,255,255,0.7) 100%);
+        background: rgba(0,0,0,0.5);
     }
     
     .cta-container {
@@ -1057,6 +1092,10 @@ section {
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
     }
 }
 
