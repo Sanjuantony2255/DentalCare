@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manjaly Multi Speciality Dental Care | Thrissur</title>
+    <meta name="description" content="Manjaly Multi Speciality Dental Care in Thrissur offers premium dental treatments.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Phosphor Icons for modern iconography -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="Assets/logo.png" alt="Manjaly Dental Care Logo">
+                <div class="logo-text">
+                    <span class="brand-name">Manjaly</span>
+                    <span class="brand-sub">Multi Speciality Dental Care</span>
+                </div>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#treatments">Services</a>
+                <a href="#doctors">Dentists</a>
+                <a href="#gallery">Portfolio</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="tel:6238497517" class="btn btn-primary" style="box-shadow: none; border-radius: 50px;">SCHEDULE A VISIT</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-content">
+            <button class="close-menu-btn" id="close-menu-btn"><i class="ph ph-x"></i></button>
+            <nav class="mobile-nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#treatments">Treatments</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#doctors">Doctors</a>
+                <a href="tel:6238497517" class="btn btn-primary mt-4">Book Consultation</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="Assets/hero-doctor.png" alt="Dental Care Background" class="hero-img">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="container hero-container">
+            <div class="hero-content fade-in-up">
+                <div class="badge" style="background: transparent; color: white !important; padding: 0; font-weight: normal; border: none; letter-spacing: 2px;">MANJALY DENTAL CARE</div>
+                <h1>A <i>calmer</i> way to<br>care for your smile.</h1>
+                <p>Gentle dentistry designed to remove fear, build trust, and deliver confident, lasting results.</p>
+                
+                <div class="hero-cta">
+                    <a href="tel:6238497517" class="btn btn-primary" style="background: var(--primary); border-color: var(--primary); color: white;">
+                        SCHEDULE A VISIT
+                    </a>
+                </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <a href="#about">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <!-- About & Location Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="text-center section-header">
+                <h2 class="section-title">Relax...your Dentist Knows Best</h2>
+                <h3 class="section-subtitle">Excellence in Dentistry</h3>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-content slide-in-left">
+                    <div class="info-card" style="box-shadow: none; background: transparent; border-bottom: 1px solid rgba(0,0,0,0.05); border-radius: 0;">
+                        <div class="info-icon" style="background: transparent; border: 1px solid var(--text-muted); color: var(--text-muted); width: 32px; height: 32px; font-size: 1rem;"><i class="ph ph-lock"></i></div>
+                        <div class="info-text">
+                            <h4 style="font-size: 1rem;">Dental hygiene never forget</h4>
+                            <p>At Manjaly Multi Speciality Dental Care, we are committed to providing you with the highest standard of personalized care.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card mt-3" style="box-shadow: none; background: transparent; border-bottom: 1px solid rgba(0,0,0,0.05); border-radius: 0;">
+                        <div class="info-icon" style="background: transparent; border: 1px solid var(--text-muted); color: var(--text-muted); width: 32px; height: 32px; font-size: 1rem;"><i class="ph ph-clock"></i></div>
+                        <div class="info-text">
+                            <h4 style="font-size: 1rem;">Don't rush when you brush!</h4>
+                            <p>We trust that you will find our clinic's atmosphere calming, our staff friendly and proficient.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image slide-in-right">
+                    <div class="image-wrapper" style="box-shadow: none; border-radius: 0;">
+                        <img src="Assets/hh.jpg" alt="Clinic Environment">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatments Section -->
+    <section class="treatments" id="treatments">
+        <div class="container">
+            <div class="text-center section-header">
+                <h2 class="section-title" style="font-size: clamp(2.5rem, 5vw, 4rem); max-width: 600px; text-align: left; margin: 0 auto 3rem 0;">Curated care for every<br>smile journey.</h2>
+            </div>
+            
+            <div class="treatments-grid">
+                <div class="treatment-card">
+                    <div class="treatment-image">
+                        <img src="Assets/gg.jpg" alt="Invisible Restoration">
+                    </div>
+                    <div class="treatment-content">
+                        <h4>Invisible<br>Restoration.</h4>
+                        <div class="treatment-details">
+                            <div class="treatment-detail">
+                                <i class="ph ph-clock"></i>
+                                <div class="treatment-detail-text">
+                                    <span>45-60 min</span>
+                                    <small>Duration</small>
+                                </div>
+                            </div>
+                            <div class="treatment-detail">
+                                <i class="ph ph-heart"></i>
+                                <div class="treatment-detail-text">
+                                    <span>Gentle & Seamless</span>
+                                    <small>Comfort Level</small>
+                                </div>
+                            </div>
+                            <div class="treatment-detail">
+                                <i class="ph ph-sparkle"></i>
+                                <div class="treatment-detail-text">
+                                    <span>Natural Blend</span>
+                                    <small>Result</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="treatment-card">
+                    <div class="treatment-image">
+                        <img src="Assets/hh.jpg" alt="Advanced Renewal">
+                    </div>
+                    <div class="treatment-content">
+                        <h4>Advanced<br>Renewal.</h4>
+                        <div class="treatment-details">
+                            <div class="treatment-detail">
+                                <i class="ph ph-clock"></i>
+                                <div class="treatment-detail-text">
+                                    <span>60 Min</span>
+                                    <small>Duration</small>
+                                </div>
+                            </div>
+                            <div class="treatment-detail">
+                                <i class="ph ph-heart"></i>
+                                <div class="treatment-detail-text">
+                                    <span>Gentle & Non-invasive</span>
+                                    <small>Comfort Level</small>
+                                </div>
+                            </div>
+                            <div class="treatment-detail">
+                                <i class="ph ph-sparkle"></i>
+                                <div class="treatment-detail-text">
+                                    <span>Instant Radiance Boost</span>
+                                    <small>Result</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="treatment-card">
+                    <div class="treatment-image">
+                        <img src="Assets/ii.jpg" alt="Signature Illumination">
+                    </div>
+                    <div class="treatment-content">
+                        <h4>Signature<br>Illumination.</h4>
+                        <div class="treatment-details">
+                            <div class="treatment-detail">
+                                <i class="ph ph-clock"></i>
+                                <div class="treatment-detail-text">
+                                    <span>60-90 Min</span>
+                                    <small>Duration</small>
+                                </div>
+                            </div>
+                            <div class="treatment-detail">
+                                <i class="ph ph-heart"></i>
+                                <div class="treatment-detail-text">
+                                    <span>Gentle & Non-invasive</span>
+                                    <small>Comfort Level</small>
+                                </div>
+                            </div>
+                            <div class="treatment-detail">
+                                <i class="ph ph-sparkle"></i>
+                                <div class="treatment-detail-text">
+                                    <span>Instant Radiance Boost</span>
+                                    <small>Result</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="treatment-card">
+                    <div class="treatment-image">
+                        <img src="Assets/ll.jpg" alt="Calming Sedation">
+                    </div>
+                    <div class="treatment-content">
+                        <h4>Calming<br>Sedation.</h4>
+                        <div class="treatment-details">
+                            <div class="treatment-detail">
+                                <i class="ph ph-clock"></i>
+                                <div class="treatment-detail-text">
+                                    <span>30-45 Min</span>
+                                    <small>Duration</small>
+                                </div>
+                            </div>
+                            <div class="treatment-detail">
+                                <i class="ph ph-heart"></i>
+                                <div class="treatment-detail-text">
+                                    <span>Gentle & Seamless</span>
+                                    <small>Comfort Level</small>
+                                </div>
+                            </div>
+                            <div class="treatment-detail">
+                                <i class="ph ph-sparkle"></i>
+                                <div class="treatment-detail-text">
+                                    <span>Deep Relaxation</span>
+                                    <small>Result</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline" style="margin-top: 2rem;">View All Services</a>
+            </div>
+            
+            <div class="facilities-banner mt-4">
+                <div class="info-card" style="justify-content: center; text-align: center;">
+                    <div class="info-text">
+                        <h4 style="color: var(--primary);">DIGITAL DENTAL XRAY & INTRA ORAL CAMERA</h4>
+                        <p>Facilities Are Available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase / Case Study Section -->
+    <section class="showcase-section">
+        <div class="container">
+            <div class="showcase-card">
+                <div class="showcase-content">
+                    <h2 class="showcase-title">Smile Transformation<br>with Porcelain Veneers.</h2>
+                    <ul class="showcase-list">
+                        <li>PATIENT: <strong>DAVID BROWN</strong></li>
+                        <li>TREATMENT: <strong>VENEERS</strong></li>
+                        <li>TIMELINE: <strong>3 WEEKS</strong></li>
+                    </ul>
+                    <div>
+                        <a href="#" class="btn btn-primary" style="background: var(--primary-light); font-size: 0.8rem; border-radius: 50px;">VIEW DETAILS</a>
+                    </div>
+                    
+                    <div class="showcase-stats">
+                        <div class="showcase-stat">
+                            <div class="number">6+</div>
+                            <div class="label">MONTHS SINCE<br>COMPLETION</div>
+                        </div>
+                        <div class="showcase-stat">
+                            <div class="number">86%</div>
+                            <div class="label">IMPROVED CLARITY</div>
+                        </div>
+                        <div class="showcase-stat">
+                            <div class="number">10/10</div>
+                            <div class="label">TREATMENT SUCCESS</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-image">
+                    <img src="Assets/nn.jpg" alt="Smile Transformation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section class="doctors" id="doctors" style="background: var(--bg-offwhite);">
+        <div class="container">
+            <div class="text-center section-header">
+                <h2 class="section-title">Our Team</h2>
+                <h3 class="section-subtitle">Expertise in Major Dentistry</h3>
+            </div>
+            
+            <div class="doctors-grid">
+                <div class="doctor-card info-card">
+                    <div class="info-icon"><i class="ph ph-user-circle"></i></div>
+                    <div class="info-text">
+                        <h4>Dr. Jeswin Jose</h4>
+                        <p>Doctor</p>
+                    </div>
+                </div>
+                <div class="doctor-card info-card">
+                    <div class="info-icon"><i class="ph ph-user-circle"></i></div>
+                    <div class="info-text">
+                        <h4>Dr. Olevia Emmatty Joseph</h4>
+                        <p>Doctor</p>
+                    </div>
+                </div>
+                <div class="doctor-card info-card">
+                    <div class="info-icon"><i class="ph ph-user-circle"></i></div>
+                    <div class="info-text">
+                        <h4>Dr. Antony Davis</h4>
+                        <p>Doctor</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center section-header" style="margin-top: 4rem;">
+                <h3 class="section-subtitle" style="font-size: 2rem;">Consultant Specialists</h3>
+            </div>
+            
+            <div class="doctors-grid">
+                <div class="doctor-card info-card">
+                    <div class="info-icon"><i class="ph ph-user-circle"></i></div>
+                    <div class="info-text">
+                        <h4>Dr. Megha Manjunath MDS</h4>
+                        <p>Dept.of Orthodontics (പല്ല് നിരയാക്കുന്ന വിഭാഗം)</p>
+                    </div>
+                </div>
+                <div class="doctor-card info-card">
+                    <div class="info-icon"><i class="ph ph-user-circle"></i></div>
+                    <div class="info-text">
+                        <h4>Dr. Akshay.M MDS</h4>
+                        <p>Dept.of Oral Surgery (മുഖ താടിയെല്ല് ശസ്ത്രക്രിയ വിഭാഗം)</p>
+                    </div>
+                </div>
+                <div class="doctor-card info-card">
+                    <div class="info-icon"><i class="ph ph-user-circle"></i></div>
+                    <div class="info-text">
+                        <h4>Dr. Jimmy George MDS</h4>
+                        <p>Dept.of Endodontics (ദന്തവേരുചികിത്സാ വിഭാഗം)</p>
+                    </div>
+                </div>
+                <div class="doctor-card info-card">
+                    <div class="info-icon"><i class="ph ph-user-circle"></i></div>
+                    <div class="info-text">
+                        <h4>Dr. Reji Gopalan MDS</h4>
+                        <p>Dept.of Prosthodontics (കൃത്രിമ ദന്തരൂപകല്പന വിഭാഗം)</p>
+                    </div>
+                </div>
+                <div class="doctor-card info-card">
+                    <div class="info-icon"><i class="ph ph-user-circle"></i></div>
+                    <div class="info-text">
+                        <h4>Dr. Amritha Prabhakar MDS</h4>
+                        <p>Dept.of Pedodontics (കുട്ടികളുടെ ദന്തരോഗ വിഭാഗം)</p>
+                    </div>
+                </div>
+                <div class="doctor-card info-card">
+                    <div class="info-icon"><i class="ph ph-user-circle"></i></div>
+                    <div class="info-text">
+                        <h4>Dr. Anurag Vinod Kumar MDS</h4>
+                        <p>Dept.of Pedodontics (കുട്ടികളുടെ ദന്തരോഗ വിഭാഗം)</p>
+                    </div>
+                </div>
+                <div class="doctor-card info-card">
+                    <div class="info-icon"><i class="ph ph-user-circle"></i></div>
+                    <div class="info-text">
+                        <h4>Dr. Sharath MDS</h4>
+                        <p>Dept.of Periodontics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Works / Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="text-center section-header">
+                <h2 class="section-title">Our Gallery</h2>
+                <h3 class="section-subtitle">Recent Works & Clinic</h3>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="Assets/gg.jpg" alt="Clinic Interior"></div>
+                <div class="gallery-item"><img src="Assets/hh.jpg" alt="Dental Equipment"></div>
+                <div class="gallery-item"><img src="Assets/ii.jpg" alt="Patient Care"></div>
+                <div class="gallery-item"><img src="Assets/ll.jpg" alt="Treatment Room"></div>
+                <div class="gallery-item"><img src="Assets/nn.jpg" alt="Recent Work"></div>
+                <div class="gallery-item"><img src="Assets/ss.jpg" alt="Recent Work"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section (Cyan Bar) -->
+    <section class="cta-section" style="padding: 2rem 0; display: flex; justify-content: center; align-items: center; gap: 1rem;">
+        <h2 style="color: white; margin: 0; font-weight: 300; font-size: 1.5rem;">Get in touch with us today <strong>6238497517</strong></h2>
+        <a href="tel:6238497517" class="btn btn-outline" style="color: white; border-color: white;">Make an Appointment</a>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats" style="background: var(--primary); color: white; padding: 4rem 0; text-align: center;">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 3rem; font-weight: 300;">Dentistry is restoring smile in people</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div>
+                    <div style="font-size: 3rem; font-weight: 700; font-family: var(--font-display);">650</div>
+                    <div style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 1rem;">650+ Cosmetic Surgeries</div>
+                    <p style="font-size: 0.8rem; opacity: 0.7;">Quality care provided by expert hands to ensure the best aesthetic outcomes.</p>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; font-weight: 700; font-family: var(--font-display);">250</div>
+                    <div style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 1rem;">250+ Root Canal Treatments</div>
+                    <p style="font-size: 0.8rem; opacity: 0.7;">Painless procedures effectively resolving deep dental infections.</p>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; font-weight: 700; font-family: var(--font-display);">150</div>
+                    <div style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 1rem;">150+ Pediatric Surgeries</div>
+                    <p style="font-size: 0.8rem; opacity: 0.7;">Gentle and specialized care for the little smiles in our community.</p>
+                </div>
+            </div>
+            <a href="#about" class="btn btn-outline" style="color: white; border-color: white; background: rgba(0,0,0,0.2); margin-top: 3rem; border: none;">Find out more</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="logo footer-logo">
+                        <img src="Assets/logo.png" alt="Manjaly Dental Care Logo">
+                        <div class="logo-text">
+                            <span class="brand-name">Manjaly</span>
+                            <span class="brand-sub">Dental Care</span>
+                        </div>
+                    </a>
+                    <p>Providing premium multi-speciality dental care in Thrissur. Your smile is our priority.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/916238497517" target="_blank"><i class="ph ph-whatsapp-logo"></i></a>
+                        <a href="https://www.instagram.com/manjalydentalcare/" target="_blank"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="mailto:manjalymdc@gmail.com"><i class="ph ph-envelope-simple"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#treatments">Treatments</a></li>
+                        <li><a href="#doctors">Doctors</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>
+                            <i class="ph ph-map-pin"></i> 
+                            <a href="https://maps.app.goo.gl/vWbgwookmMHJwxXJ7?g_st=aw" target="_blank" style="color: inherit;">Valakkavu, above MJ supermarket, Thrissur, Kerala 680751</a>
+                        </li>
+                        <li>
+                            <i class="ph ph-phone"></i> 
+                            <a href="tel:6238497517">6238497517</a>, <a href="tel:9072467117">9072467117</a>
+                        </li>
+                        <li>
+                            <i class="ph ph-envelope-simple"></i>
+                            <a href="mailto:manjalymdc@gmail.com">manjalymdc@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Manjaly Multi Speciality Dental Care. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <a href="https://wa.me/916238497517" target="_blank" class="floating-btn" style="background-color: #25D366;">
+        <i class="ph ph-whatsapp-logo"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
