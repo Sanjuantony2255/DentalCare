@@ -131,9 +131,9 @@ img {
 
 /* Animations */
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(37, 99, 235, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
 .pulse-animation {
@@ -322,6 +322,7 @@ img {
     padding-top: 5rem;
     isolation: isolate;
     overflow: hidden;
+    background: #0e1813;
 }
 
 .hero-bg {
@@ -338,6 +339,7 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: 80% center;
+    display: block;
 }
 
 .hero-overlay {
@@ -347,7 +349,14 @@ img {
     width: 100%;
     height: 100%;
     z-index: 2;
-    background: linear-gradient(90deg, rgba(20, 32, 27, 0.88) 0%, rgba(20, 32, 27, 0.65) 50%, rgba(20, 32, 27, 0.2) 100%);
+    background: linear-gradient(
+        90deg,
+        rgba(16, 26, 21, 0.92) 0%,
+        rgba(16, 26, 21, 0.76) 42%,
+        rgba(16, 26, 21, 0.35) 75%,
+        rgba(16, 26, 21, 0.12) 100%
+    );
+    pointer-events: none;
 }
 
 .hero-container {
@@ -364,29 +373,28 @@ img {
     padding-bottom: 6rem;
 }
 
-.hero-mobile-img-wrapper {
-    display: none;
-}
-
-.badge {
+.badge.hero-badge {
     display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: 0;
     background: transparent;
-    color: white !important;
-    border: 1px solid rgba(255,255,255,0.5);
-    border-radius: 50px;
+    color: #ffffff !important;
+    border: none;
     font-size: 0.875rem;
     font-weight: 500;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
     margin-bottom: 1.5rem;
+    opacity: 0.95;
 }
 
 .hero h1 {
-    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-size: clamp(2.85rem, 5.5vw, 4.25rem);
     margin-bottom: 1.5rem;
-    color: white;
+    color: #ffffff;
     font-weight: 400;
-    line-height: 1.1;
+    line-height: 1.14;
     font-family: var(--font-display);
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
 }
 
 .hero h1 i {
@@ -396,46 +404,55 @@ img {
 
 .hero p {
     font-size: 1.125rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-    color: white;
+    margin-bottom: 2.25rem;
+    opacity: 0.94;
+    color: rgba(255, 255, 255, 0.94);
+    line-height: 1.6;
+    max-width: 560px;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
 }
 
-.hero-testimonial {
-    position: absolute;
-    bottom: 5rem;
-    right: 2rem;
-    background: rgba(162, 148, 129, 0.85);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    padding: 2rem;
-    width: 320px;
-    color: white;
-    z-index: 2;
-    border: 1px solid rgba(255,255,255,0.1);
-}
-
-.hero-testimonial .stars {
-    color: #FFD700;
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-}
-
-.hero-testimonial p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-}
-
-.hero-testimonial .author {
-    font-size: 0.875rem;
-    opacity: 0.9;
-}
-
+/* Hero CTA Buttons */
 .hero-cta {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+}
+
+.hero-cta .btn {
+    padding: 0.85rem 1.65rem;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hero-cta .btn-primary {
+    background: var(--primary);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-cta .btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-cta .btn-whatsapp {
+    background: #25D366;
+    color: white;
+    box-shadow: 0 4px 18px rgba(37, 211, 102, 0.35);
+}
+
+.hero-cta .btn-whatsapp:hover {
+    background: #1ebc57;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
 }
 
 .scroll-indicator {
@@ -1287,6 +1304,10 @@ section {
     .mobile-menu-btn {
         display: flex;
     }
+
+    .hero-content {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1336,67 +1357,99 @@ section {
         font-size: 0.68rem;
     }
 
-    /* Hero Section Mobile */
+    /* Hero Section Mobile - Full bleed doctor photo background */
     .hero {
         padding-top: 5.5rem;
-        padding-bottom: 3rem;
-        min-height: auto;
-        display: block;
-        background: #14201b;
+        padding-bottom: 4rem;
+        min-height: 100vh;
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        background: #0e1813;
     }
     
     .hero-bg {
-        display: none;
+        display: block !important;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .hero-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 70% 18%; /* Focus on doctors' smiling faces */
+        display: block;
+    }
+
+    .hero-overlay {
+        display: block !important;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background: linear-gradient(
+            180deg,
+            rgba(14, 24, 19, 0.72) 0%,
+            rgba(14, 24, 19, 0.84) 42%,
+            rgba(14, 24, 19, 0.95) 100%
+        );
+        pointer-events: none;
     }
     
+    .hero-container {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+    }
+
     .hero-content {
-        padding-top: 1rem;
-        padding-bottom: 1.5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
         max-width: 100%;
         text-align: left;
     }
 
-    .hero-mobile-img-wrapper {
-        display: block;
-        width: 100%;
-        margin: 1.15rem 0 1.5rem 0;
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.45);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        background: rgba(255, 255, 255, 0.05);
-    }
-
-    .hero-mobile-img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-        object-position: 70% 25%;
-        display: block;
+    .badge.hero-badge {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+        display: inline-block;
     }
 
     .hero h1 {
-        font-size: clamp(2rem, 6.5vw, 2.75rem);
-        margin-bottom: 0.5rem;
+        font-size: clamp(2.15rem, 7.5vw, 2.9rem);
+        line-height: 1.16;
+        margin-bottom: 1.1rem;
     }
 
     .hero p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.02rem;
+        line-height: 1.55;
+        margin-bottom: 2rem;
         opacity: 0.92;
+        max-width: 100%;
     }
 
     .hero-cta {
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap: 0.75rem;
+        gap: 0.85rem;
     }
 
     .hero-cta .btn {
         width: 100%;
-        padding: 0.85rem 1.5rem;
-        font-size: 0.9rem;
+        padding: 0.9rem 1.5rem;
+        font-size: 0.875rem;
+        justify-content: center;
     }
 
     .scroll-indicator {
