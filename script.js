@@ -84,6 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.querySelectorAll('.gallery-filters .filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-grid .gallery-item');
     const galleryCountEl = document.getElementById('gallery-count');
+    if (galleryCountEl) {
+        galleryCountEl.textContent = galleryItems.length;
+    }
 
     const filterGallery = (category) => {
         let visibleCount = 0;
@@ -212,4 +215,103 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     };
+
+    // ==========================================
+    // 6. Appointment Booking via WhatsApp
+    // ==========================================
+    const appointmentForm = document.getElementById('appointment-form');
+    if (appointmentForm) {
+        const nameInput = document.getElementById('appointment-name');
+        const phoneInput = document.getElementById('appointment-phone');
+        const dateInput = document.getElementById('appointment-date');
+        const timeInput = document.getElementById('appointment-time');
+        const serviceInput = document.getElementById('appointment-service');
+        const messageInput = document.getElementById('appointment-message');
+
+        const nameError = document.getElementById('name-error');
+        const phoneError = document.getElementById('phone-error');
+
+        // Clear error on input
+        if (nameInput) {
+            nameInput.addEventListener('input', () => {
+                if (nameInput.value.trim()) {
+                    nameInput.classList.remove('input-invalid');
+                    if (nameError) nameError.style.display = 'none';
+                }
+            });
+        }
+
+        if (phoneInput) {
+            phoneInput.addEventListener('input', () => {
+                const digits = phoneInput.value.replace(/[^0-9]/g, '');
+                if (digits.length >= 7) {
+                    phoneInput.classList.remove('input-invalid');
+                    if (phoneError) phoneError.style.display = 'none';
+                }
+            });
+        }
+
+        appointmentForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = nameInput ? nameInput.value.trim() : '';
+            const phone = phoneInput ? phoneInput.value.trim() : '';
+            const date = dateInput ? dateInput.value.trim() : '';
+            const time = timeInput ? timeInput.value.trim() : '';
+            const service = serviceInput ? serviceInput.value.trim() : '';
+            const message = messageInput ? messageInput.value.trim() : '';
+
+            let isValid = true;
+
+            if (!name) {
+                if (nameInput) nameInput.classList.add('input-invalid');
+                if (nameError) nameError.style.display = 'block';
+                isValid = false;
+            } else {
+                if (nameInput) nameInput.classList.remove('input-invalid');
+                if (nameError) nameError.style.display = 'none';
+            }
+
+            const cleanPhone = phone.replace(/[^0-9]/g, '');
+            if (!phone || cleanPhone.length < 7) {
+                if (phoneInput) phoneInput.classList.add('input-invalid');
+                if (phoneError) phoneError.style.display = 'block';
+                isValid = false;
+            } else {
+                if (phoneInput) phoneInput.classList.remove('input-invalid');
+                if (phoneError) phoneError.style.display = 'none';
+            }
+
+            if (!isValid) {
+                // Focus first invalid field
+                if (!name && nameInput) nameInput.focus();
+                else if (phoneInput) phoneInput.focus();
+                return;
+            }
+
+            // Construct formatted WhatsApp message
+            let waText = `Hello Manjaly Dental Care,\n\nI would like to book an appointment with your dental specialists:\n\n`;
+            waText += `👤 *Name:* ${name}\n`;
+            waText += `📞 *Phone:* ${phone}\n`;
+            if (date) {
+                waText += `📅 *Preferred Date:* ${date}\n`;
+            }
+            if (time) {
+                waText += `⏰ *Preferred Time:* ${time}\n`;
+            }
+            if (service) {
+                waText += `🦷 *Service/Treatment:* ${service}\n`;
+            }
+            if (message) {
+                waText += `📝 *Notes/Concerns:* ${message}\n`;
+            }
+            waText += `\nPlease let me know the available time slots. Thank you!`;
+
+            const clinicNumber = '916238497517';
+            const whatsappUrl = `https://wa.me/${clinicNumber}?text=${encodeURIComponent(waText)}`;
+
+            // Redirect to WhatsApp
+            window.open(whatsappUrl, '_blank');
+        });
+    }
 });

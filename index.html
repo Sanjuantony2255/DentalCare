@@ -46,12 +46,13 @@
                 <a href="#treatments">Services</a>
                 <a href="#doctors">Dentists</a>
                 <a href="#gallery">Gallery</a>
+                <a href="#appointment">Appointment</a>
             </nav>
 
             <div class="nav-actions">
-                <a href="tel:6238497517" class="btn btn-primary" style="box-shadow: none; border-radius: 50px;">SCHEDULE
+                <a href="#appointment" class="btn btn-primary" style="box-shadow: none; border-radius: 50px;">SCHEDULE
                     A VISIT</a>
-                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
                     <i class="ph ph-list"></i>
                 </button>
             </div>
@@ -61,14 +62,25 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu" id="mobile-menu">
         <div class="mobile-menu-content">
-            <button class="close-menu-btn" id="close-menu-btn"><i class="ph ph-x"></i></button>
+            <div class="mobile-menu-header">
+                <div class="logo">
+                    <img src="Assets/logo.png" alt="Manjaly Dental Care Logo">
+                    <div class="logo-text">
+                        <span class="brand-name">Manjaly</span>
+                        <span class="brand-sub">Multi Speciality Dental Care</span>
+                    </div>
+                </div>
+                <button class="close-menu-btn" id="close-menu-btn" aria-label="Close menu"><i
+                        class="ph ph-x"></i></button>
+            </div>
             <nav class="mobile-nav-links">
                 <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#treatments">Treatments</a>
+                <a href="#about">About Us</a>
+                <a href="#treatments">Services</a>
+                <a href="#doctors">Dentists</a>
                 <a href="#gallery">Gallery</a>
-                <a href="#doctors">Doctors</a>
-                <a href="tel:6238497517" class="btn btn-primary mt-4">Book Consultation</a>
+                <a href="#appointment">Appointment</a>
+                <a href="#appointment" class="btn btn-primary mt-4">Book Appointment</a>
             </nav>
         </div>
     </div>
@@ -76,7 +88,7 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-bg">
-            <img src="Assets/hero-doctor.jpeg" alt="Dr. Jeswin Jose & Team at Manjaly Dental Care" class="hero-img">
+            <img src="Assets/hero-doctor.jpeg" alt="Dr. Jeswin Jose BDS & Team at Manjaly Dental Care" class="hero-img">
             <div class="hero-overlay"></div>
         </div>
 
@@ -145,7 +157,7 @@
 
                 <div class="about-image slide-in-right">
                     <div class="image-wrapper">
-                        <img src="Assets/cover.jpeg" alt="Manjaly Dental Care Clinic Environment" loading="lazy">
+                        <img src="Assets/jeswin bro.jpeg" alt="Manjaly Dental Care Clinic Environment" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -356,14 +368,14 @@
                 <div class="doctor-card info-card">
                     <div class="info-icon"><i class="ph ph-user-circle"></i></div>
                     <div class="info-text">
-                        <h4>Dr. Olevia Emmatty Joseph</h4>
+                        <h4>Dr. Olevia Emmatty Joseph BDS</h4>
                         <p>Doctor</p>
                     </div>
                 </div>
                 <div class="doctor-card info-card">
                     <div class="info-icon"><i class="ph ph-user-circle"></i></div>
                     <div class="info-text">
-                        <h4>Dr. Antony Davis</h4>
+                        <h4>Dr. Antony Davis BDS</h4>
                         <p>Doctor</p>
                     </div>
                 </div>
@@ -712,9 +724,10 @@
                     </div>
                 </div>
                 <!-- 28 -->
-                <div class="gallery-item" data-category="makeover" data-title="Porcelain Veneers Smile Transformation"
-                    data-src="Assets/nn.png">
-                    <img src="Assets/nn.png" alt="Porcelain Veneers Smile Transformation" loading="lazy">
+                <div class="gallery-item" data-category="makeover" data-title="Diastema Closure & Smile Transformation"
+                    data-src="Assets/658973242_17958552882108369_8033524674013645949_n.jpg">
+                    <img src="Assets/658973242_17958552882108369_8033524674013645949_n.jpg"
+                        alt="Diastema Closure & Smile Transformation" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">Smile Makeover</span>
                         <div class="gallery-zoom-icon"><i class="ph ph-magnifying-glass-plus"></i></div>
@@ -730,11 +743,20 @@
                     </div>
                 </div>
                 <!-- 30 -->
-                <div class="gallery-item" data-category="treatments" data-title="Personalized Treatment In Progress"
-                    data-src="Assets/hero-doctor.jpeg">
-                    <img src="Assets/hero-doctor.jpeg" alt="Personalized Treatment In Progress" loading="lazy">
+                <div class="gallery-item" data-category="clinic" data-title="Dr. Jeswin Jose at Manjaly Dental Clinic"
+                    data-src="Assets/33.jpeg">
+                    <img src="Assets/33.jpeg" alt="Dr. Jeswin Jose at Manjaly Dental Clinic" loading="lazy">
                     <div class="gallery-overlay">
-                        <span class="gallery-tag">Treatments</span>
+                        <span class="gallery-tag">Clinic & Care</span>
+                        <div class="gallery-zoom-icon"><i class="ph ph-magnifying-glass-plus"></i></div>
+                    </div>
+                </div>
+                <!-- 31 -->
+                <div class="gallery-item" data-category="makeover" data-title="Aesthetic Anterior Teeth Restoration"
+                    data-src="Assets/ss.jpg">
+                    <img src="Assets/ss.jpg" alt="Aesthetic Anterior Teeth Restoration" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Smile Makeover</span>
                         <div class="gallery-zoom-icon"><i class="ph ph-magnifying-glass-plus"></i></div>
                     </div>
                 </div>
@@ -779,6 +801,78 @@
         </div>
     </section>
 
+    <!-- Appointment Section -->
+    <section class="appointment" id="appointment">
+        <div class="container">
+            <div class="appointment-card">
+                <div class="appointment-header text-center">
+                    <span class="badge appointment-badge">ONLINE APPOINTMENT</span>
+                    <h2 class="section-title" style="margin-bottom: 0.75rem;">Book Your Visit</h2>
+                    <p class="appointment-desc">
+                        Enter your name and phone number below. Clicking <strong>Book Appointment</strong> will
+                        instantly redirect your booking details to our clinic on WhatsApp.
+                    </p>
+                </div>
+
+                <form class="appointment-form" id="appointment-form" novalidate>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="appointment-name"><i class="ph ph-user"></i> Full Name <span
+                                    class="required-star">*</span></label>
+                            <input type="text" id="appointment-name" name="name" class="form-control"
+                                placeholder="Enter your full name" required autocomplete="name">
+                            <span class="form-error-msg" id="name-error">Please enter your name</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="appointment-phone"><i class="ph ph-phone"></i> Phone Number <span
+                                    class="required-star">*</span></label>
+                            <input type="tel" id="appointment-phone" name="phone" class="form-control"
+                                placeholder="Enter your phone number" required autocomplete="tel">
+                            <span class="form-error-msg" id="phone-error">Please enter a valid phone number</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="appointment-date"><i class="ph ph-calendar"></i> Preferred Date
+                                (Optional)</label>
+                            <input type="date" id="appointment-date" name="date" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="appointment-time"><i class="ph ph-clock"></i> Preferred Time (Optional)</label>
+                            <select id="appointment-time" name="time" class="form-control">
+                                <option value="">Select Time Slot (Optional)</option>
+                                <option value="Morning (9:30 AM - 1:00 PM)">Morning (9:30 AM - 1:00 PM)</option>
+                                <option value="Afternoon (2:00 PM - 5:00 PM)">Afternoon (2:00 PM - 5:00 PM)</option>
+                                <option value="Evening (5:00 PM - 8:00 PM)">Evening (5:00 PM - 8:00 PM)</option>
+                            </select>
+                        </div>
+
+
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="appointment-message"><i class="ph ph-chat-text"></i> Message / Concerns
+                            (Optional)</label>
+                        <textarea id="appointment-message" name="message" class="form-control" rows="3"
+                            placeholder="Tell us about any specific toothache, preferred time of day, or other details..."></textarea>
+                    </div>
+
+                    <div class="form-actions text-center">
+                        <button type="submit" class="btn btn-whatsapp btn-appointment-submit"
+                            id="btn-submit-appointment">
+                            <i class="ph ph-whatsapp-logo"></i> BOOK APPOINTMENT VIA WHATSAPP
+                        </button>
+                        <p class="appointment-security-note">
+                            <i class="ph ph-shield-check"></i> Connects directly to Manjaly Dental Care clinic desk
+                            &bull; Instant confirmation
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -788,7 +882,7 @@
                         <img src="Assets/logo.png" alt="Manjaly Dental Care Logo">
                         <div class="logo-text">
                             <span class="brand-name">Manjaly</span>
-                            <span class="brand-sub">Dental Care</span>
+                            <span class="brand-sub">Multi Speciality Dental Care</span>
                         </div>
                     </a>
                     <p>Providing premium multi-speciality dental care in Thrissur. Your smile is our priority.</p>
@@ -805,9 +899,10 @@
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#treatments">Treatments</a></li>
-                        <li><a href="#doctors">Doctors</a></li>
+                        <li><a href="#treatments">Services</a></li>
+                        <li><a href="#doctors">Dentists</a></li>
                         <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#appointment">Appointment</a></li>
                     </ul>
                 </div>
 

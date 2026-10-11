@@ -288,14 +288,27 @@ img {
     right: 0;
 }
 
+.mobile-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    width: 100%;
+}
+
 .close-menu-btn {
-    align-self: flex-end;
     background: none;
     border: none;
     font-size: 1.5rem;
     color: var(--secondary);
     cursor: pointer;
-    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+    margin-bottom: 0;
 }
 
 .mobile-nav-links {
@@ -1099,6 +1112,159 @@ section {
     gap: 2rem;
 }
 
+/* ========================================================
+   APPOINTMENT SECTION
+   ======================================================== */
+.appointment {
+    padding: 5.5rem 0;
+    background: linear-gradient(180deg, var(--bg-light) 0%, #e5ede9 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.appointment-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 3.5rem 3rem;
+    box-shadow: 0 20px 45px -10px rgba(44, 53, 49, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(74, 93, 83, 0.12);
+    max-width: 860px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.appointment-badge {
+    background: rgba(74, 93, 83, 0.08);
+    color: var(--primary) !important;
+    border: 1px solid rgba(74, 93, 83, 0.2);
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.appointment-desc {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 620px;
+    margin: 0 auto 2.5rem auto;
+    line-height: 1.6;
+}
+
+.appointment-form {
+    width: 100%;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.form-group label i {
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.required-star {
+    color: #e11d48;
+    font-weight: 700;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.85rem 1.15rem;
+    border-radius: 12px;
+    border: 1.5px solid #d3d8d6;
+    background: #fbfdfc;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--text-main);
+    transition: var(--transition);
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(74, 93, 83, 0.15);
+}
+
+.form-control.input-invalid {
+    border-color: #e11d48 !important;
+    background: #fff1f2 !important;
+}
+
+.form-error-msg {
+    display: none;
+    color: #e11d48;
+    font-size: 0.78rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+}
+
+.form-group-full {
+    margin-bottom: 2rem;
+}
+
+.form-group-full textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.btn-appointment-submit {
+    padding: 1.05rem 2.5rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+}
+
+.btn-appointment-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.45);
+}
+
+.appointment-security-note {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-top: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.appointment-security-note i {
+    color: #25D366;
+    font-size: 1rem;
+}
+
 /* Footer */
 .footer {
     background: var(--secondary);
@@ -1345,16 +1511,38 @@ section {
         color: white;
     }
 
+    .logo {
+        gap: 0.55rem;
+    }
+
     .logo img {
         height: 36px;
+        width: auto;
+        flex-shrink: 0;
+    }
+
+    .logo-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .brand-name {
+        font-family: var(--font-display);
         font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--primary);
+        line-height: 1.1;
     }
 
     .brand-sub {
-        font-size: 0.68rem;
+        font-size: 0.64rem;
+        color: var(--text-muted);
+        font-weight: 600;
+        letter-spacing: 0.35px;
+        text-transform: uppercase;
+        display: block !important;
+        line-height: 1.15;
     }
 
     /* Hero Section Mobile - Show all doctors without cropping */
@@ -1634,6 +1822,34 @@ section {
         gap: 2.5rem;
     }
 
+    /* Appointment Mobile */
+    .appointment {
+        padding: 3.5rem 0;
+    }
+
+    .appointment-card {
+        padding: 2.25rem 1.25rem;
+        border-radius: 18px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .appointment-desc {
+        font-size: 0.95rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .btn-appointment-submit {
+        width: 100%;
+        padding: 0.95rem 1.25rem;
+        font-size: 0.88rem;
+        justify-content: center;
+    }
+
     /* Footer Mobile */
     .footer {
         padding: 3.5rem 0 1.5rem;
@@ -1661,12 +1877,27 @@ section {
         gap: 0.5rem;
     }
 
+    .logo {
+        gap: 0.45rem;
+    }
+
+    .logo img {
+        height: 32px;
+    }
+
+    .brand-name {
+        font-size: 1.05rem;
+    }
+
     .brand-sub {
-        display: none;
+        display: block !important;
+        font-size: 0.56rem;
+        letter-spacing: 0.2px;
+        line-height: 1.1;
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.95rem;
     }
 
     .filter-btn {
