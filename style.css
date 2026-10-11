@@ -1357,14 +1357,14 @@ section {
         font-size: 0.68rem;
     }
 
-    /* Hero Section Mobile - Full bleed doctor photo background */
+    /* Hero Section Mobile - Show all doctors without cropping */
     .hero {
-        padding-top: 5.5rem;
+        padding-top: 5rem;
         padding-bottom: 4rem;
         min-height: 100vh;
         min-height: 100svh;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         position: relative;
         isolation: isolate;
         overflow: hidden;
@@ -1382,10 +1382,12 @@ section {
 
     .hero-img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 70% 18%; /* Focus on doctors' smiling faces */
+        height: auto;
+        aspect-ratio: 1536 / 1024;
+        object-fit: contain;
+        object-position: center top;
         display: block;
+        margin-top: 3.8rem; /* Below the fixed header */
     }
 
     .hero-overlay {
@@ -1397,9 +1399,13 @@ section {
         z-index: 2;
         background: linear-gradient(
             180deg,
-            rgba(14, 24, 19, 0.72) 0%,
-            rgba(14, 24, 19, 0.84) 42%,
-            rgba(14, 24, 19, 0.95) 100%
+            rgba(14, 24, 19, 0.4) 0%,
+            rgba(14, 24, 19, 0) 10%,
+            rgba(14, 24, 19, 0) calc(3.8rem + 12vw),
+            rgba(14, 24, 19, 0.55) calc(3.8rem + 30vw),
+            rgba(14, 24, 19, 0.92) calc(3.8rem + 48vw),
+            #0e1813 calc(3.8rem + 62vw),
+            #0e1813 100%
         );
         pointer-events: none;
     }
@@ -1411,29 +1417,29 @@ section {
     }
 
     .hero-content {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: calc(3.8rem + 30vw);
+        padding-bottom: 2.5rem;
         max-width: 100%;
         text-align: left;
     }
 
     .badge.hero-badge {
-        font-size: 0.8rem;
+        font-size: 0.78rem;
         letter-spacing: 2px;
-        margin-bottom: 1rem;
+        margin-bottom: 0.75rem;
         display: inline-block;
     }
 
     .hero h1 {
-        font-size: clamp(2.15rem, 7.5vw, 2.9rem);
-        line-height: 1.16;
-        margin-bottom: 1.1rem;
+        font-size: clamp(1.95rem, 6.8vw, 2.65rem);
+        line-height: 1.15;
+        margin-bottom: 0.85rem;
     }
 
     .hero p {
-        font-size: 1.02rem;
-        line-height: 1.55;
-        margin-bottom: 2rem;
+        font-size: 0.98rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
         opacity: 0.92;
         max-width: 100%;
     }
@@ -1442,13 +1448,13 @@ section {
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap: 0.85rem;
+        gap: 0.75rem;
     }
 
     .hero-cta .btn {
         width: 100%;
-        padding: 0.9rem 1.5rem;
-        font-size: 0.875rem;
+        padding: 0.85rem 1.4rem;
+        font-size: 0.85rem;
         justify-content: center;
     }
 
